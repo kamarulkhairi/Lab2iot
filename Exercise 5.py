@@ -4,7 +4,8 @@ class ClipList:
         self.max = max
 
     def __setitem__(self, key, value):
-        return
+        if self.min > key > self.max:
+            self.record[key] += value
 
     def __getitem__(self, key):
         return self.record[key]
